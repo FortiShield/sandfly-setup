@@ -17,8 +17,8 @@ jobs:
       
       - name: Ubuntu 18 Docker Install
         run: |
-          sudo chmod +x ./setup/install_docker_ubuntu18.sh
-          sh ./setup/install_docker_ubuntu18.sh
+          sudo chmod +x ./setup/install_docker_ubuntu20.sh
+          sh ./setup/install_docker_ubuntu20.sh
           
 
         
