@@ -14,15 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Install yq and jq
-      - name: Install yq and jq
+      
+      - name: Ubuntu 18 Docker Install
         run: |
-          mkdir -p ~/bin
-          wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O ~/bin/yq
-          chmod +x ~/bin/yq
-          echo "$HOME/bin" >> $GITHUB_PATH
-          sudo apt-get install -y jq curl
-      - name: Check for new Flutter versions 
-        run: sh setup/install_docker_centos7.sh
+          sudo chmod +x setup/install_docker_ubuntu18.sh
+          sh setup/install_docker_ubuntu18.sh
+          
 
         
