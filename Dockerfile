@@ -51,4 +51,4 @@ COPY . .
 
 # Install LTE stack dependencies --> HERE THE WARNINGS 'debconf: unable to initialize frontend: Dialog' ARE DISPLAYED
 RUN chmod +x ./setup/install.sh \
-    bash ./setup/install.sh
+    ./setup/install.sh
