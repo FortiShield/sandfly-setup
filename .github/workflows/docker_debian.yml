@@ -13,12 +13,18 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v4
-
-      
-      - name: Ubuntu 18 Docker Install
+      - name: Debian 9 and Newer Docker Install
         run: |
           sudo chmod +x ./setup/install_docker_debian.sh
           sh ./setup/install_docker_debian.sh
+          service docker start
           
+      - name: Server Setup Script
+        run: |
+          sudo chmod +x ./setup/install.sh
+          sh ./setup/install.sh
+          
+      - name: Start the Server
+        run: sh ./start_scripts/start_sandfly.sh
 
         
