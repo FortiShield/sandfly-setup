@@ -23,6 +23,6 @@ jobs:
           sudo chmod +x ./setup/install.sh
           
       - name: Start the Server
-        run: sh ./start_scripts/start_sandfly.sh
+        run: sh ./start_scripts/start_node.sh
 
         
