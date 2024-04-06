@@ -1,4 +1,4 @@
-name: "Check Flutter versions"
+name: "Debian 9 and Newer Docker Install"
 on:
   schedule:
     # Every 2 hours
