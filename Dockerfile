@@ -45,6 +45,10 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
+WORKDIR /usr/src/app
+
+COPY . /usr/src/app
+
 # Install LTE stack dependencies --> HERE THE WARNINGS 'debconf: unable to initialize frontend: Dialog' ARE DISPLAYED
-RUN chmod +x ./setup/install.sh \
-    && export DEBIAN_FRONTEND=noninteractive; ./setup/install.sh
+RUN chmod +x ./usr/src/app/setup/install.sh \
+    && export DEBIAN_FRONTEND=noninteractive; ./usr/src/app/setup/install.sh
